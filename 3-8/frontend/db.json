@@ -1,0 +1,49 @@
+{
+  "persons": [
+    {
+      "name": "Arto Hellas",
+      "number": "040-123456",
+      "id": 1
+    },
+    {
+      "name": "Ada Lovelace",
+      "number": "39-44-5323523",
+      "id": 2
+    },
+    {
+      "name": "Dan Abramov",
+      "number": "12-43-234345",
+      "id": 3
+    },
+    {
+      "name": "Mary Poppendieck",
+      "number": "39-23-6423122",
+      "id": 4
+    },
+    {
+      "name": "Cristiano Ronaldo",
+      "number": "77-7777777777",
+      "id": 8
+    },
+    {
+      "name": "Kylian Mbappe",
+      "number": "25-27-28282822",
+      "id": 9
+    },
+    {
+      "name": "Lionel Messi",
+      "number": "10-10-101010101",
+      "id": 11
+    },
+    {
+      "name": "Erling Haaland",
+      "number": "15-99-999999",
+      "id": 12
+    },
+    {
+      "name": "Neymar Jr.",
+      "number": "11-11-11111111",
+      "id": 13
+    }
+  ]
+}

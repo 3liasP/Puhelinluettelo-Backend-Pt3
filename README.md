@@ -1,9 +1,13 @@
 # Web-ohjelmointi: Puhelinluettelo-backend -projekti
 ## Osa 3, tehtävät 3.1 - [loppu tähän!]
 
-Vanhojen vastauksien `index.js` -tiedostot sisältyvät ja ovat nimetty kunkin tehtävän mukaan (esim. `index-3-2.js` tehtävälle 3.2 jne.).
-Viimeisin vastaus tehtävään on aina tiedostossa `index.js`.
-Vanhat vastaukset ovat lähinnä varmuuskopioita toimivista versioista ja ne demonstroivat työnkulkua.
+### Tärkeää
+- Tehtävän 3.7 jälkeen kansiorakenne on formatoitu uudelleen ja tehtävän 3.7. jälkeen tehtävät tullaan kokoamaan omiin tehtäväkohtaisiin kansioihinsa.
+    - Ensimmäinen näistä on tehtävä 3.8.
+- Tehtävät 3.1 -> 3.7 löytyvät kansiosta `/until 3-7/`
+    - Täällä Vanhojen vastauksien `index.js` -tiedostot sisältyvät ja ovat nimetty kunkin tehtävän mukaan (esim. `index-3-2.js` tehtävälle 3.2 jne.).
+    - Viimeisin vastaus tehtävään on aina tiedostossa `index.js`.
+    - Vanhat vastaukset ovat lähinnä varmuuskopioita toimivista versioista ja ne demonstroivat työnkulkua.
 
 ### Tehtävä 3.1
 - Toimii ongelmitta
@@ -40,3 +44,7 @@ Vanhat vastaukset ovat lähinnä varmuuskopioita toimivista versioista ja ne dem
 - Toimii ongelmitta
 - Lisätty sovellukseen loggausta tekevä middleware `morgan`.
 - Testattu toimivaksi myös `dev`-tilassa, logaus ilmestyy konsoliin kun esim. pyyntöjä saadaan
+
+### Tehtävä 3.8
+- Toimii ongelmitta
+- Backend toimii edellisessä osassa tehdyn puhelinluettelon frontendin kanssa
