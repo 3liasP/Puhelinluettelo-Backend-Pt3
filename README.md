@@ -48,3 +48,14 @@
 ### Tehtävä 3.8
 - Toimii ongelmitta
 - Backend toimii edellisessä osassa tehdyn puhelinluettelon frontendin kanssa
+- Ratkaisu sijaitsee kansiossa 3-8 (ratkaisun 3-10 kanssa)
+
+### Tehtävä 3.9*
+- Ylim. vapaaehtoinen tehtävä
+- Jätetty tekemättä palautettaessa!
+
+#### Tehtävä 3.10
+- Toimii ongelmitta
+- Generoitu frontendistä tuotantoversio
+- Muutettu backendia tarjoamaan kyseistä tuotantoversiota käyttämällä static-middlewarea.
+- Ratkaisu sijaitsee kansiossa 3-8, sillä tuotantoversio oli luonnollista rakentaa samaan kansioon

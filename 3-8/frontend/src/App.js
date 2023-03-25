@@ -5,7 +5,6 @@ import Notification from './components/Notification'
 import Persons from './components/Persons';
 import './index.css'
 
-// App-2-16.js
 // Pääkomponentti
 const App = () => {
 	// Taulukko henkilöille ja näiden tiedoille
