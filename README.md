@@ -81,4 +81,9 @@
 - Backend hakee näytettävät puhelintiedot MongoDB-tietokannasta ja uudet numerot tallennetaan tietokantaan
     - Eli tietokantaan lisääminen onnistuu tässä vaiheessa
 - Myös frontend toimii edelleen muutosten jälkeen
-- Sijainnissa `/from 3-8`, tiedostoisa `index-3-13.js`
+- Sijainnissa `/from 3-8`, tiedostossa `index-3-13.js`
+
+### Tehtävä 3.14
+- Toimii ongelmitta
+- Edellisten toimintojen lisäksi nyt myös numerotietojen poistaminen päivittyy MongoDB-tietokantaan.
+- Sijainnissa `/from 3-8`, tiedostossa `index-3-14.js`
