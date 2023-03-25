@@ -30,7 +30,13 @@ Vanhat vastaukset ovat lähinnä varmuuskopioita toimivista versioista ja ne dem
 - Uuden puhelintiedon tunniste generoidaan funktiolla `Math.random`
 
 ### Tehtävä 3.6
+- Toimii ongelmitta
 - Lisätty uuden numeron lisäykseen virheiden käsittely mikäli:
     - Nimi tai numero puuttuu
     - Lisättävä nimi on jo luettelossa
     - Vastataan virhetilanteisiin statuskoodilla `400` ja kerrotaan virheen syy
+
+### Tehtävä 3.7
+- Toimii ongelmitta
+- Lisätty sovellukseen loggausta tekevä middleware `morgan`.
+- Testattu toimivaksi myös `dev`-tilassa, logaus ilmestyy konsoliin kun esim. pyyntöjä saadaan
