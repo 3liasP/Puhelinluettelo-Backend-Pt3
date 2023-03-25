@@ -24,31 +24,12 @@ let persons = [
     }
   ]
 
-
-
 app.get('/', (req, res) => {
 res.send('<h1>Welcome to Phonebook (with nodemon)!</h1>')
 })
 
 app.get('/api/persons', (req, res) => {
 res.json(persons)
-})
-
-app.get('/api/persons/:id', (request, response) => {
-  const id = Number(request.params.id)
-  const person = persons.find(person => person.id === id)
-
-  if (person) {
-      response.json(person)
-  } else {
-      // id:tä vastaavaa puhelinnumerotietoa ei ole
-      response.status(404).end()
-  }
-})
-
-app.get('/info', (req, res) => {
-  const handlingTime = new Date()
-  res.send(`<p> Phonebook has info for ${persons.length} people <br/> ${handlingTime} </p>`)
 })
 
 const PORT = 3001
