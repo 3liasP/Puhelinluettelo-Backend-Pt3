@@ -1,6 +1,10 @@
 # Web-ohjelmointi: Puhelinluettelo-backend -projekti
 ## Osa 3, tehtävät 3.1 - [loppu tähän!]
 
+Vanhojen vastauksien `index.js` -tiedostot sisältyvät ja ovat nimetty kunkin tehtävän mukaan (esim. `index-3-2.js` tehtävälle 3.2 jne.).
+Viimeisin vastaus tehtävään on aina tiedostossa `index.js`.
+Vanhat vastaukset ovat lähinnä varmuuskopioita toimivista versioista ja ne demonstroivat työnkulkua.
+
 ### Tehtävä 3.1
 - Toimii ongelmitta
 - Tarjoaa osoitteessa http://localhost:3001/api/persons kovakoodatun taulukon puhelinnumerotietoja
@@ -14,7 +18,7 @@
 ### Tehtävä 3.3
 - Toimii ongelmitta
 - Voidaan näyttää yksittäinen puhelinnumerotieto osoitteessa http://localhost:3001/api/persons/5
-- Jos id:tä vastaavaa puhelinnumerotietoa ei ole, palvelin vastaa statuskoodilla 404
+- Jos id:tä vastaavaa puhelinnumerotietoa ei ole, palvelin vastaa statuskoodilla `404`
 
 ### Tehtävä 3.4
 - Toimii ongelmitta, toiminta testattu VSC:n REST clientillä
@@ -24,3 +28,9 @@
 - Toimii ongelmitta
 - Uusia puhelintietoja on mahdollista lisätä osoitteeseen http://localhost:3001/api/persons tapahtuvalla HTTP POST -pyynnöllä.
 - Uuden puhelintiedon tunniste generoidaan funktiolla `Math.random`
+
+### Tehtävä 3.6
+- Lisätty uuden numeron lisäykseen virheiden käsittely mikäli:
+    - Nimi tai numero puuttuu
+    - Lisättävä nimi on jo luettelossa
+    - Vastataan virhetilanteisiin statuskoodilla `400` ja kerrotaan virheen syy
