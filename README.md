@@ -75,5 +75,3 @@
 - Sijainnissa `from 3-8`, tiedostoissa `index-3-12.js`
     - Sijaintiin lisätty myös `\models` kansio, jossa Mongoose-spesifinen koodi on eriyttetty omaan moduuliinsa `person.js`
 
-
-
