@@ -9,9 +9,18 @@
 
 ### Tehtävä 3.2
 - Toimii ongelmitta
-- Kertoo pyynnön tekohetken ja montako puhelinluettelotietoa sovelluksen muistissa olevassa taulukossa on osoitteessa `http://localhost:3001/info`
+- Kertoo pyynnön tekohetken ja montako puhelinluettelotietoa sovelluksen muistissa olevassa taulukossa on osoitteessa http://localhost:3001/info
 
 ### Tehtävä 3.3
 - Toimii ongelmitta
-- Voidaan näyttää yksittäinen puhelinnumerotieto osoitteessa `http://localhost:3001/api/persons/5`
+- Voidaan näyttää yksittäinen puhelinnumerotieto osoitteessa http://localhost:3001/api/persons/5
 - Jos id:tä vastaavaa puhelinnumerotietoa ei ole, palvelin vastaa statuskoodilla 404
+
+### Tehtävä 3.4
+- Toimii ongelmitta, toiminta testattu VSC:n REST clientillä
+- Lisätty toiminnallisuus, jonka avulla puhelinnumerotieto on mahdollista poistaa numerotiedon yksilöivään URL:iin tehtävällä HTTP DELETE -pyynnöllä.
+
+### Tehtävä 3.5
+- Toimii ongelmitta
+- Uusia puhelintietoja on mahdollista lisätä osoitteeseen http://localhost:3001/api/persons tapahtuvalla HTTP POST -pyynnöllä.
+- Uuden puhelintiedon tunniste generoidaan funktiolla `Math.random`

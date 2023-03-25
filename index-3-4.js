@@ -1,6 +1,5 @@
 const express = require('express')
 const app = express()
-app.use(express.json())
 
 let persons = [
     {
@@ -50,28 +49,6 @@ app.delete('/api/persons/:id', (request, response) => {
   const id = Number(request.params.id)
   persons = persons.filter(person => person.id !== id)
   response.status(204).end()
-})
-
-const randomId = () => {
-  // satunnainen kokonaisluku henkilön id-arvoksi
-  const randId = Math.floor(Math.random() * 1001)
-  return randId
-}
-
-app.post('/api/persons', (request, response) => {
-  const body = request.body
-  if (!body.name) {
-      return response.status(400).json({
-          error: 'Missing name!'
-      })
-  }
-  const person = {
-      name: body.name,
-      number: body.number,
-      id: randomId()
-  }
-  persons = persons.concat(person)
-  response.json(person)
 })
 
 app.get('/info', (req, res) => {
