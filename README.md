@@ -1,12 +1,13 @@
 # Web-ohjelmointi: Puhelinluettelo-backend -projekti
-## Osa 3, tehtävät 3.1 - [loppu tähän!]
+## Osa 3, tehtävät 3.1 - 3.15
 
-### Tärkeää
-- Tehtävän 3.7 jälkeen kansiorakenne on formatoitu uudelleen ja tehtävän 3.7. jälkeen tehtävät tullaan kokoamaan uuteen kansioon `from 3-8`
-- Tehtävät 3.1 -> 3.7 löytyvät kansiosta `/until 3-7/`
-    - Täällä Vanhojen vastauksien `index.js` -tiedostot sisältyvät ja ovat nimetty kunkin tehtävän mukaan (esim. `index-3-2.js` tehtävälle 3.2 jne.).
-    - Viimeisin vastaus tehtävään on aina tiedostossa `index.js`.
-    - Vanhat vastaukset ovat lähinnä varmuuskopioita toimivista versioista ja ne demonstroivat työnkulkua.
+### *Tärkeää*
+- Tehtävän 3.7 jälkeen kansiorakenne on formatoitu uudelleen ja tehtävän 3.7. jälkeiset tehtävät on koottu uuteen kansioon `/from 3-8`
+- Tehtävät 3.1 -> 3.7 löytyvät kansiosta `/until 3-7`
+#### Muuta
+- Vanhojen vastauksien `index.js` -tiedostot sisältyvät ja ovat nimetty kunkin tehtävän mukaan (esim. `index-3-2.js` tehtävälle 3.2 jne.).
+- Viimeisin vastaus tehtävään on aina tiedostossa `index.js`.
+- Vanhat vastaukset ovat lähinnä varmuuskopioita toimivista versioista ja ne demonstroivat työnkulkua.
 
 ### Tehtävä 3.1
 - Toimii ongelmitta
@@ -47,7 +48,7 @@
 ### Tehtävä 3.8
 - Toimii ongelmitta
 - Backend toimii edellisessä osassa tehdyn puhelinluettelon frontendin kanssa
-- Ratkaisu sijaitsee kansiossa `from 3-8` (ratkaisun 3-10 kanssa)
+- Ratkaisu sijaitsee kansiossa `/from 3-8` (ratkaisun 3-10 kanssa)
 
 ### Tehtävä 3.9*
 - Ylim. vapaaehtoinen tehtävä
@@ -57,11 +58,11 @@
 - Toimii ongelmitta
 - Generoitu frontendistä tuotantoversio
 - Muutettu backendia tarjoamaan kyseistä tuotantoversiota käyttämällä static-middlewarea.
-- Ratkaisu sijaitsee kansiossa `from 3-8`, sillä tuotantoversio oli luonnollista rakentaa samaan kansioon
+- Ratkaisu sijaitsee kansiossa `/from 3-8`, sillä tuotantoversio oli luonnollista rakentaa samaan kansioon
 
 ### Tehtävä 3.11
 - Toimii ongelmitta
-- Tehty jälleen sijaintiin `from 3-8`, lisätty `mongo.js`.
+- Tehty jälleen sijaintiin `/from 3-8`, lisätty `mongo.js`.
     - Tämän tehtävän aikainen versio samassa sijainnissa tiedostossa `mongo-3-11.js`
 - Lisätty siis toiminnallisuus lisätä henkilöitä MongoDB tietokantaan komentoriviltä esim. seuraavasti:
     - Lisää tietokantaan: `node mongo.js yourpassword "Arto Vihavainen" 040-1234556`
@@ -72,6 +73,12 @@
 - Backend hakee näytettävät puhelintiedot MongoDB-tietokannasta
 - Frontend toimii edelleen muutosten jälkeen
 - Lisääminen ei vielä onnistu tietokantaan (toteutus seuraavassa tehtävässä)
-- Sijainnissa `from 3-8`, tiedostoissa `index-3-12.js`
-    - Sijaintiin lisätty myös `\models` kansio, jossa Mongoose-spesifinen koodi on eriyttetty omaan moduuliinsa `person.js`
+- Sijainnissa `/from 3-8`, tiedostossa `index-3-12.js`
+    - Sijaintiin lisätty myös `/models` kansio, jossa Mongoose-spesifinen koodi on eriyttetty omaan moduuliinsa `person.js`
 
+### Tehtävä 3.13
+- Toimii ongelmitta
+- Backend hakee näytettävät puhelintiedot MongoDB-tietokannasta ja uudet numerot tallennetaan tietokantaan
+    - Eli tietokantaan lisääminen onnistuu tässä vaiheessa
+- Myös frontend toimii edelleen muutosten jälkeen
+- Sijainnissa `/from 3-8`, tiedostoisa `index-3-13.js`
