@@ -97,10 +97,9 @@
     - Ilmoittaa virhekoodin `400` mikäli yritetään poistaa vääränlaisen id:n omaavaa henkilöä
 - *Virheitä ei kuitenkaan käsitellä middlewaren avulla, vaan poikkeuksen aiheuttavan virhetilanteen käsittelevä koodi on kirjoitettu muun koodin sekaan*
 - Sijainnissa `/from 3-8`, tiedostossa `index-3-14-5.js`
-- Tämän tehtävän vastaus on myös sijainnissa `index.js`
-    - Tämä siksi, sillä tämä vastayson myös viimeinen varmasti toimiva sovellus, joka on testattu laajasti jokaisen ominaisuuden osalta
 
-### Tehtävä 3.15
+
+### Tehtävä 3.15 (vanha osittainen ratkaisu, jätetty vain dokumentoinnin vuoksi)
 - Toimii osittain, edeltävät ominaisuudet toimivat, mutta middlewaren toiminnallisuuden vieminen loppuun on tehty vain osittain
 - Sijainnissa `/from 3-8`, tiedostossa `index-3-15-try.js`
 - Virheidenkäsittelijä-middleware on lisätty ja formatoitu sovellukseen, mutta sen toiminta käytännössä on ontuvaa
@@ -109,6 +108,19 @@
     - Nyt jokaisella henkilötiedolla on kaksi id:tä, mikä hankaloittaa niiden hakemista ja poistamista.
     - Kun kokeillaan virheellisen "id":n (**ei MongoDB-tietokannan oman "_id":n**) perusteella poistaa `delete_person.rest`-tiedoston avulla, jää pyyntö "Waiting"-tilaan odottamaan, että löytyisi olemattoman id:n omaava henkilö.
     - Voitaisiin yrittää korjata poistamalla kokonaan vanha "id" ja siirtyä käyttämään MongoDB:n "_id":tä, mutta tämä voisi rikkoa tähänastisen toiminnallisuuden, joka on riippuvainen alkuperäisestä vanhasta "id:stä"
+
+
+### Tehtävä 3.15 (lopullinen ratkaisu)
+- Nyt toiminnallisuus korjattu!
+- Virheet käsitellään virheidenkäsittelijän avulla `next(error)`
+- `CastErrorin` sijasta saamme kuitenkin `TypeErrorin`, kun yritämme etsiä "id":tä, jota ei löyty.
+    - `IndexError` johtuu siitä, että `foundPerson._id` saa parametrikseen Null, kun haluttua "id":tä ei löydy.
+    - Tämän virheen voisi käsitellä monella tavalla, mutta nyt sen käsittely tapahtuu pyydetyllä tavalla, vaikka itse virhe on eri.
+    - Lisäksi vastaus myös keskittää virheidenkäsittelyn middlewareen
+- Tämän tehtävän vastaus on sijainnissa `/from 3-8/index-.js`
+    - Myös varmuuskopioitu muokkauksien varalta sijainnissa `index-15-final.js`
+    - Tämä on viimeinen toimiva versio sovelluksesta (palautusversio kaikkine ominaisuuksineen)
+
 
 #### CastErrorin nappaaminen toimii, kun `app.delete` muuttettiin seuraavanlaiseksi:
 
@@ -123,3 +135,4 @@ app.delete('/api/persons/:id', (request, response, next) => {
 ```
 
 Tällöin pyynnön parametrinä tulee antaa MongoDB-tietokannan oma "_id". Täten toiminnallisuuden saisi poistamalla kokonaan vanha "id" käytöstä ja siirtyä käyttämään MongoDB:n tarjoamaa "_id":tä
+
