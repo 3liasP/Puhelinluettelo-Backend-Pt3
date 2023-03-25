@@ -48,14 +48,22 @@
 ### Tehtävä 3.8
 - Toimii ongelmitta
 - Backend toimii edellisessä osassa tehdyn puhelinluettelon frontendin kanssa
-- Ratkaisu sijaitsee kansiossa 3-8 (ratkaisun 3-10 kanssa)
+- Ratkaisu sijaitsee kansiossa `from 3-8` (ratkaisun 3-10 kanssa)
 
 ### Tehtävä 3.9*
 - Ylim. vapaaehtoinen tehtävä
 - Jätetty tekemättä palautettaessa!
 
-#### Tehtävä 3.10
+### Tehtävä 3.10
 - Toimii ongelmitta
 - Generoitu frontendistä tuotantoversio
 - Muutettu backendia tarjoamaan kyseistä tuotantoversiota käyttämällä static-middlewarea.
-- Ratkaisu sijaitsee kansiossa 3-8, sillä tuotantoversio oli luonnollista rakentaa samaan kansioon
+- Ratkaisu sijaitsee kansiossa `from 3-8`, sillä tuotantoversio oli luonnollista rakentaa samaan kansioon
+
+### Tehtävä 3.11
+- Toimii ongelmitta
+- Tehty jälleen sijaintiin `from 3-8`, lisätty `mongo.js`.
+    - Tämän tehtävän aikainen versio samassa sijainnissa tiedostossa `mongo-3-11.js`
+- Lisätty siis toiminnallisuus lisätä henkilöitä MongoDB tietokantaan komentoriviltä esim. seuraavasti:
+    - Lisää tietokantaan: `node mongo.js yourpassword "Arto Vihavainen" 040-1234556`
+    - Tulosta tietokannassa olevat numerotiedot: `node mongo.js yourpassword`
