@@ -117,7 +117,7 @@
     - `IndexError` johtuu siitä, että `foundPerson._id` saa parametrikseen Null, kun haluttua "id":tä ei löydy.
     - Tämän virheen voisi käsitellä monella tavalla, mutta nyt sen käsittely tapahtuu pyydetyllä tavalla, vaikka itse virhe on eri.
     - Lisäksi vastaus myös keskittää virheidenkäsittelyn middlewareen
-- Tämän tehtävän vastaus on sijainnissa `/from 3-8/index-.js`
+- Tämän tehtävän vastaus on sijainnissa `/from 3-8/index.js`
     - Myös varmuuskopioitu muokkauksien varalta sijainnissa `index-15-final.js`
     - Tämä on viimeinen toimiva versio sovelluksesta (palautusversio kaikkine ominaisuuksineen)
 
