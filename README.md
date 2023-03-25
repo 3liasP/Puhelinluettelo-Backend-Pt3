@@ -4,7 +4,8 @@
 ### *Tärkeää*
 - Tehtävän 3.7 jälkeen kansiorakenne on formatoitu uudelleen ja tehtävän 3.7. jälkeiset tehtävät on koottu uuteen kansioon `/from 3-8`
 - Tehtävät 3.1 -> 3.7 löytyvät kansiosta `/until 3-7`
-#### Muuta
+
+### *Muuta*
 - Vanhojen vastauksien `index.js` -tiedostot sisältyvät ja ovat nimetty kunkin tehtävän mukaan (esim. `index-3-2.js` tehtävälle 3.2 jne.).
 - Viimeisin vastaus tehtävään on aina tiedostossa `index.js`.
 - Vanhat vastaukset ovat lähinnä varmuuskopioita toimivista versioista ja ne demonstroivat työnkulkua.
@@ -87,3 +88,38 @@
 - Toimii ongelmitta
 - Edellisten toimintojen lisäksi nyt myös numerotietojen poistaminen päivittyy MongoDB-tietokantaan.
 - Sijainnissa `/from 3-8`, tiedostossa `index-3-14.js`
+
+### Tehtävä 3.14.5 (oma välivaihe)
+- Toimii ongelmitta
+- Edellisten toimintojen lisäksi nyt Id:n avulla hakeminen onnistuu
+- Lisätty toiminnallisuus virheitten käsittelyyn
+    - Ilmoittaa virhekoodin `404` mikäli haetaan id:tä, joka ei ole olemassa
+    - Ilmoittaa virhekoodin `400` mikäli yritetään poistaa vääränlaisen id:n omaavaa henkilöä
+- *Virheitä ei kuitenkaan käsitellä middlewaren avulla, vaan poikkeuksen aiheuttavan virhetilanteen käsittelevä koodi on kirjoitettu muun koodin sekaan*
+- Sijainnissa `/from 3-8`, tiedostossa `index-3-14-5.js`
+- Tämän tehtävän vastaus on myös sijainnissa `index.js`
+    - Tämä siksi, sillä tämä vastayson myös viimeinen varmasti toimiva sovellus, joka on testattu laajasti jokaisen ominaisuuden osalta
+
+### Tehtävä 3.15
+- Toimii osittain, edeltävät ominaisuudet toimivat, mutta middlewaren toiminnallisuuden vieminen loppuun on tehty vain osittain
+- Sijainnissa `/from 3-8`, tiedostossa `index-3-15-try.js`
+- Virheidenkäsittelijä-middleware on lisätty ja formatoitu sovellukseen, mutta sen toiminta käytännössä on ontuvaa
+- Syynä on todennäköisesti seuraava:
+    - CastErrorin nappaaminen toimisi, mikäli id:nä käytettäisiin MongoDB-tietokannan "_id":tä erillisen parametrin "id" sijaan.
+    - Nyt jokaisella henkilötiedolla on kaksi id:tä, mikä hankaloittaa niiden hakemista ja poistamista.
+    - Kun kokeillaan virheellisen "id":n (**ei MongoDB-tietokannan oman "_id":n**) perusteella poistaa `delete_person.rest`-tiedoston avulla, jää pyyntö "Waiting"-tilaan odottamaan, että löytyisi olemattoman id:n omaava henkilö.
+    - Voitaisiin yrittää korjata poistamalla kokonaan vanha "id" ja siirtyä käyttämään MongoDB:n "_id":tä, mutta tämä voisi rikkoa tähänastisen toiminnallisuuden, joka on riippuvainen alkuperäisestä vanhasta "id:stä"
+
+#### CastErrorin nappaaminen toimii, kun `app.delete` muuttettiin seuraavanlaiseksi:
+
+```
+app.delete('/api/persons/:id', (request, response, next) => {
+    Person.findByIdAndRemove(request.params.id)
+        .then(result => {
+            response.status(204).end()
+        })
+        .catch(error => next(error))
+})
+```
+
+Tällöin pyynnön parametrinä tulee antaa MongoDB-tietokannan oma "_id". Täten toiminnallisuuden saisi poistamalla kokonaan vanha "id" käytöstä ja siirtyä käyttämään MongoDB:n tarjoamaa "_id":tä
